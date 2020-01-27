@@ -102,18 +102,12 @@ function drawMatrix(matrix, offset) {
   matrix.forEach((row, y) => {
     row.forEach((value, x) => {
       if (value !== 0) {
-        context.strokeStyle = "#fff";
-        context.strokeRect(
-            x + offset.x + .25,
-            y + offset.y + .25,
-            .125 + .025,
-            .125);
         context.fillStyle = colors[value];
         context.fillRect(
             x + offset.x,
             y + offset.y,
-            .625,
-            .625);
+            .9,
+            .9);
       }
     });
   })
